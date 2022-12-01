@@ -1,22 +1,7 @@
-#include "main.h"
+#!/usr/bin/python3
 
-/**
- * flip_bits - returns the number of bits you would
- * need to flip to get from one number to another
- * @n: number one.
- * @m: number two.
- *
- * Return: number of bits.
- */
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
-{
-	unsigned int nbits;
+if __name__ == "__main__":
+    """Print the value of variable a from variable_load_5."""
+    from variable_load_5 import a
 
-	for (nbits = 0; n || m; n >>= 1, m >>= 1)
-	{
-		if ((n & 1) != (m & 1))
-			nbits++;
-	}
-
-	return (nbits);
-}
+    print(a)

@@ -1,27 +1,15 @@
-#include "main.h"
+#!/usr/bin/python3
 
-/**
- * get_bit - returns the value of a bit at a given
- * index.
- * @n: unsigned long int input.
- * @index: index of the bit.
- *
- * Return: value of the bit.
- */
-int get_bit(unsigned long int n, unsigned int index)
-{
-	unsigned int i;
+if __name__ == "__main__":
+    """Print the number of and list of arguments."""
+    import sys
 
-	if (n == 0 && index < 64)
-		return (0);
-
-	for (i = 0; i <= 63; n >>= 1, i++)
-	{
-		if (index == i)
-		{
-			return (n & 1);
-		}
-	}
-
-	return (-1);
-}
+    count = len(sys.argv) - 1
+    if count == 0:
+        print("0 arguments.")
+    elif count == 1:
+        print("1 argument:")
+    else:
+        print("{} arguments:".format(count))
+    for i in range(count):
+        print("{}: {}".format(i + 1, sys.argv[i + 1]))

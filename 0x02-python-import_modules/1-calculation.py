@@ -1,22 +1,13 @@
-#include "main.h"
+#!/usr/bin/python3
 
-/**
- * print_binary - prints the binary representation
- * of a number.
- * @n: unsigned long int.
- *
- * Return: no return.
- */
-void print_binary(unsigned long int n)
-{
-	if (n >> 0)
-	{
-		if (n >> 1)
-			print_binary(n >> 1);
-		_putchar((n & 1) + '0');
-	}
-	else
-	{
-		_putchar('0');
-	}
-}
+if __name__ == "__main__":
+    """Print the sum, difference, multiple and quotient of 10 and 5."""
+    from calculator_1 import add, sub, mul, div
+
+    a = 10
+    b = 5
+
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))

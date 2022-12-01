@@ -1,24 +1,10 @@
-#include "main.h"
+#!/usr/bin/python3
 
-/**
- * clear_bit - sets the value of a bit to 0.
- * at a given index.
- * @n: pointer of an unsigned long int.
- * @index: index of the bit.
- *
- * Return: 1 if it worked, -1 if it didn't.
- */
-int clear_bit(unsigned long int *n, unsigned int index)
-{
-	unsigned int m;
+if __name__ == "__main__":
+    """Print all names defined by hidden_4 module."""
+    import hidden_4
 
-	if (index > 63)
-		return (-1);
-
-	m = 1 << index;
-
-	if (*n & m)
-		*n ^= m;
-
-	return (1);
-}
+    names = dir(hidden_4)
+    for name in names:
+        if name[:2] != "__":
+            print(name)
